@@ -7,10 +7,10 @@ from mcp_agent.core.exceptions import ModelConfigError
 from mcp_agent.core.request_params import RequestParams
 from mcp_agent.mcp.interfaces import AugmentedLLMProtocol
 from mcp_agent.workflows.llm.augmented_llm_anthropic import AnthropicAugmentedLLM
+from mcp_agent.workflows.llm.augmented_llm_deepseek import DeekSeekAugmentedLLM
 from mcp_agent.workflows.llm.augmented_llm_openai import OpenAIAugmentedLLM
 from mcp_agent.workflows.llm.augmented_llm_passthrough import PassthroughLLM
 from mcp_agent.workflows.llm.augmented_llm_playback import PlaybackLLM
-from mcp_agent.workflows.llm.augmented_llm_deepseek import DeekSeekAugmentedLLM
 
 # Type alias for LLM classes
 LLMClass = Union[
@@ -91,6 +91,8 @@ class ModelFactory:
         "claude-3-opus-latest": Provider.ANTHROPIC,
         "deepseek-chat": Provider.DEEPSEEK,
         "deepseek-reasoner": Provider.DEEPSEEK,
+        "xdeepseekv32": Provider.DEEPSEEK,
+        "xdeepseekv3": Provider.DEEPSEEK,
     }
 
     MODEL_ALIASES = {
@@ -104,7 +106,9 @@ class ModelFactory:
         "opus": "claude-3-opus-latest",
         "opus3": "claude-3-opus-latest",
         "deepseekv3": "deepseek-chat",
-        "deepseekR1": "deepseek-reasoner"
+        "deepseekR1": "deepseek-reasoner",
+        "deepseekv3-0324": "xdeepseekv32",
+        "xdeepseekv31": "xdeepseekv3",
     }
 
     # Mapping of providers to their LLM classes
