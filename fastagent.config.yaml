@@ -10,12 +10,12 @@
 # If not specified, defaults to "haiku".
 # Can be overriden with a command line switch --model=<model>, or within the Agent constructor.
 
-default_model: xdeepseekv3 #deepseek-chat
+default_model: deepseek-chat #xdeepseekv3 #deepseek-chat
 
 # Logging and Console Configuration:
 logger:
   level: "debug" #"debug" | "info" | "warning" | "error"
-  #type: "file" #"none" | "console" | "file" | "http"
+  type: "file" #"none" | "console" | "file" | "http"
   # path: "/path/to/logfile.jsonl"
 
   # Switch the progress display on or off
@@ -47,3 +47,7 @@ mcp:
         [
           "C:\\Users\\wisdri\\AppData\\Roaming\\nvm\\v22.14.0\\node_modules\\@executeautomation\\playwright-mcp-server\\dist\\index.js",
         ]
+
+    v2ex:
+      command: "C:\\Users\\wisdri\\AppData\\Roaming\\nvm\\v22.14.0\\node.exe"
+      args: ["./node_modules/mcp-server-v2ex/dist/index.js"]

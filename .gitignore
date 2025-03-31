@@ -182,3 +182,4 @@ fastagent.secrets.yaml
 CLAUDE.md
 example-outputs/
 
+node_modules/

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mcp-server-v2ex": "file:mcp-server-v2ex-0.1.0.tgz"
+  }
+}
